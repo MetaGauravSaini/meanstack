@@ -38,9 +38,9 @@ module.exports = function(app, passport) {
 
     // Facebook Strategy    
     passport.use(new FacebookStrategy({
-            clientID: '310132302703073', // Replace with your Facebook Developer App client ID
-            clientSecret: '2e94e77add384b6e2b2029947c3861b4', // Replace with your Facebook Developer client secret
-            callbackURL: "http://www.herokutestapp3z24.com/auth/facebook/callback", // Replace with your Facebook Developer App callback URL
+            clientID: '447533255719722', // Replace with your Facebook Developer App client ID
+            clientSecret: '956764b09299576e3022a9cdddbcd0e1', // Replace with your Facebook Developer client secret
+            callbackURL: "http://mean-demo-1.herokuapp.com", // Replace with your Facebook Developer App callback URL
             profileFields: ['id', 'displayName', 'photos', 'email']
         },
         function(accessToken, refreshToken, profile, done) {
@@ -58,9 +58,9 @@ module.exports = function(app, passport) {
 
     // Twitter Strategy
     passport.use(new TwitterStrategy({
-            consumerKey: 'nAsRdF40TX5fQ7QivmuJGWWSj', // Replace with your Twitter Developer App consumer key
-            consumerSecret: 'WH4MaKulaiPzrBttgS5KlQzanXmZIKZ4hmAlflfwX8jk3WNTwA', // Replace with your Twitter Developer App consumer secret
-            callbackURL: "http://www.herokutestapp3z24.com/auth/twitter/callback", // Replace with your Twitter Developer App callback URL
+            consumerKey: 'hZiGP7D2KFbIYx2rtMouhJ9HX', // Replace with your Twitter Developer App consumer key
+            consumerSecret: 'OLriATLd9aFR3TORo8bwg8SKvVoOIX1luKhz8WqI1RCXY8zRbE', // Replace with your Twitter Developer App consumer secret
+            callbackURL: "http://mean-demo-1.herokuapp.com", // Replace with your Twitter Developer App callback URL
             userProfileURL: "https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true"
         },
         function(token, tokenSecret, profile, done) {
@@ -88,9 +88,9 @@ module.exports = function(app, passport) {
 
     // Google Strategy  
     passport.use(new GoogleStrategy({
-            clientID: '852222686887-ld3cnfu1g76lpi0bgrmpbr37css6c3o0.apps.googleusercontent.com', // Replace with your Google Developer App client ID
-            clientSecret: 'j-k8frTBw-6u-De6vPqk3uSI', // Replace with your Google Developer App client ID
-            callbackURL: "http://www.herokutestapp3z24.com/auth/google/callback" // Replace with your Google Developer App callback URL
+            clientID: '339195477676-4bkgun2g9c101c6ttrou4p3a582cgkn2.apps.googleusercontent.com', // Replace with your Google Developer App client ID
+            clientSecret: 'DtSyDfKHeyQH4GdKTYyB0ZOp', // Replace with your Google Developer App client ID
+            callbackURL: "http://mean-demo-1.herokuapp.com" // Replace with your Google Developer App callback URL
         },
         function(accessToken, refreshToken, profile, done) {
             User.findOne({ email: profile.emails[0].value }).select('username active password email').exec(function(err, user) {

@@ -18,8 +18,8 @@ module.exports = function(router) {
     var client = nodemailer.createTransport({
         service: 'Zoho',
         auth: {
-            user: 'cruiserweights@zoho.com', // Your email address
-            pass: 'PAssword123!@#' // Your password
+            user: 'gaurav.saini414@gmail.com', // Your email address
+            pass: 'Gaur@4321' // Your password
         },
         tls: { rejectUnauthorized: false }
     });
